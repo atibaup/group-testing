@@ -13080,6 +13080,8 @@ div#notebook {
 <h1 id="Group-testing-for-prevalence-estimation-and-disease-monitoring">Group testing for prevalence estimation and disease monitoring<a class="anchor-link" href="#Group-testing-for-prevalence-estimation-and-disease-monitoring">&#182;</a></h1>
     <p>Arnau Tibau-Puig, arnau dot tibau at gmail dot com, April 12th, 2020</p>
     <p>The source code for this web page can be found in Github: <a href="https://github.com/atibaup/group-testing">github.com/atibaup/group-testing</a></p>
+    <p>See also the second part of this blog post on
+        <a href="https://atibaup.github.io/group-testing/group_testing_with_uncertainty.html">"Dorfman's group testing with uncertainty"</a></p>
 </div>
 </div>
 </div>
@@ -13225,7 +13227,8 @@ $p=0.1$ and $p=0.01$ coincide with his calculations:</p>
 <ol>
 <li><p><strong>The independence of the individuals within a group, as well as independence of the test's outcome across groups</strong>. Both these assumptions need not hold in practice, unless we are careful to select the tested groups truly at random, undoing potential correlations between individuals. For instance, putting members from a same family together in the same pool, or building groups from people who live in a same building or work in a same company would break these assumptions. It is not yet clear from our exposition whether this would have a negative or positive impact in the expected number of tests. We will explore this in the next blog post.</p>
 </li>
-<li><p><strong>The existence of an errorless test</strong>: Another big assumption we have carried throughout is that the tests are errorless, that is, there is no false positives or negatives. Obviously most tests will involve measuring physical quantities and will carry some uncertainty, which renders this assumption impractical. Furthermore, if a given test procedure for specimens from one individual has some error, performing the test procedure for a specimen coming from a pool of individuals is likely to increase that error. We will also explore this situation in the next blog post.</p>
+<li><p><strong>The existence of an errorless test</strong>: Another big assumption we have carried throughout is that the tests are errorless, that is, there is no false positives or negatives. Obviously most tests will involve measuring physical quantities and will carry some uncertainty, which renders this assumption impractical. Furthermore, if a given test procedure for specimens from one individual has some error, performing the test procedure for a specimen coming from a pool of individuals is likely to increase that error.
+    We will also explore this situation in the <a href="https://atibaup.github.io/group-testing/group_testing_with_uncertainty.html"> next blog post.</a></p>
 </li>
 </ol>
 <p>Given the times we are in, I would be surprised if the reader is not immediately thinking: <strong>can this be applied to COVID-19?</strong> (Of course this post was partially motivated by myself asking the same question.)</p>
