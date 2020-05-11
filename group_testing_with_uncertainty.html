@@ -13080,7 +13080,7 @@ div#notebook {
 <h1 id="Dorfman's-group-testing-with-uncertainty">Dorfman's group testing with uncertainty<a class="anchor-link" href="#Dorfman's-group-testing-with-uncertainty">&#182;</a></h1><p>Arnau Tibau-Puig, arnau dot tibau at gmail dot com, May 10th, 2020</p>
 <p>The source code generate this page and its figures can be found in Github: <a href="https://github.com/atibaup/group-testing">github.com/atibaup/group-testing</a></p><p><strong>Note</strong>: This is part II of my blog post on <a href="https://atibaup.github.io/group-testing/">"Group testing for prevalence estimation and disease monitoring"</a>.</p>
 <h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>In my <a href="https://atibaup.github.io/group-testing/">previous post</a>, we discussed Dorfman's (2-stage) Group Testing strategy, whose setup can be quickly summarized by the following figure:</p>
-<p><img src="_figures/2nd_post_figures/simple_group_testing_setup.png" alt="Notation convention"></p>
+<p><img src="_figures/2nd_post_figures/simple_group_testing_setup.png" alt="Group testing setup"></p>
 <p>Under that simplified setup, where we assumed that our test was <strong>errorless</strong> (that is, it generated no false negatives or false positives), we showed that one could obtain substantial efficiencies by applying the following
 <strong>group testing</strong> (also known as <strong>pooled testing</strong>) strategy:</p>
 <ol>
@@ -13089,7 +13089,7 @@ div#notebook {
 <li>Run the test on the pooled sample. If the test turns positive, test each of the $g$ individuals in the pool, running a total of $g+1$ tests for that pool. Otherwise, if the test turns negative, label the $g$ individuals as non-infected.</li>
 </ol>
 <p>In particular, Dorfman showed that we could detect individuals infected with a low-prevalence disease with only a fraction of the tests needed to test individually the whole population. <strong>For example, for a disease with a prevalence of 1%, we could identify the infected individuals by only running 1/5th of the tests necessary to test the whole population</strong>. In other words, <strong>if we have a limited number of tests, we could screen 5 times as many people</strong>:</p>
-<p><img src="_figures/2nd_post_figures/savings.png" alt="Notation convention"></p>
+<p><img src="_figures/2nd_post_figures/savings.png" alt=""></p>
 <p>However, during the derivation of the above charts, we hid a couple of important details under the rug:</p>
 <ol>
 <li>We assumed that the <strong>testing procedure was errorless</strong>, and </li>
@@ -13149,7 +13149,7 @@ div#notebook {
 </li>
 </ul>
 <p>The following diagram can serve as a quick reference of the group testing setup and notation (compare to the diagram of Dorfman's original setup in the Introduction):</p>
-<p><img src="noisy_group_testing_setup_v2.png" alt="Notation convention"></p>
+<p><img src="_figures/2nd_post_figures/noisy_group_testing_setup_v2.png" alt="Noisy group testing setup"></p>
 
 </div>
 </div>
@@ -13249,7 +13249,7 @@ $\bar{\pi}_1$ and $\bar{\pi}_0$:</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>So far we have been able to characterize the group-sensitivity and group-specificity of the first stage in Dorfman's group test procedure. We have also used that characterization to understand the expected savings in number of tests ($E(\gamma')$) relative to an individual testing strategy, as well as the optimal group size in the presence of test noise.</p>
 <p>We still haven't said anything yet about the <strong>global sensitivity and specificity</strong> at the end of the 2-stage Dorfman group-testing procedure. To do so, we will need to introduce once again some additional notation. We will identify by $t'_j$ the test outcome for individual $j$ at the end of the second stage, as illustrated by the diagram below:</p>
-<p><img src="notation_diagram_small.png" alt="Notation convention"></p>
+<p><img src="_figures/2nd_post_figures/notation_diagram_small.png" alt="Notation convention"></p>
 
 </div>
 </div>
@@ -13371,6 +13371,14 @@ of the <em>group-specificity</em> ($\bar{\pi}_0$) and <em>group-sensitivity</em>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Acknowledgements">Acknowledgements<a class="anchor-link" href="#Acknowledgements">&#182;</a></h2>
+I would like to thank Aleix Ruiz Villa for reading a draft of this post and spotting a couple of errors, as well as
+Pere Puig for sharing a few references and fruitful email exchanges on the topic of group testing.
+
+</div>
+
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="References">References<a class="anchor-link" href="#References">&#182;</a></h2><p>[1] <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.1541-0420.2007.00817.x?casa_token=HsqLJYtbSgYAAAAA%3A-7xaM2_X--nBXUhYbhaggy7cppv4FSDFvR6kizT3hXnoVTAkopmbCNZU6Xq3DwteOvtiLTvdpszgc8BR">Comparison of Group Testing Algorithms for Case Identification in the Presence of Test Error</a>, Hae-Young Kim et al.</p>
 <p>[2] <a href="https://academic.oup.com/biomet/article-abstract/63/3/671/270965"> Group testing with a dilution effect </a>, F. K. Hwang</p>
